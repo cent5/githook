@@ -2,6 +2,8 @@
 
 ## Usage
 
+### Auto git pull
+
 1. `cp settings.ini.template settings.ini` and set expected values.
 2. Configure **nginx**. Example:
 
@@ -24,4 +26,25 @@ server {
 
 ```
 gunicorn -b 127.0.0.1:8765 server:app --daemon
+```
+
+### Auto git push
+
+In the repo, add a file `.git/hooks/post-commit`:
+
+```bash
+#!/bin/sh
+git push origin master
+```
+
+```shell
+chmod +x .git/hooks/post-commit
+```
+
+The easiest way to point to the ssh key is to configure it in `~/.ssh/config`, for example:
+
+```
+Host bitbucket.org
+ HostName bitbucket.org
+ IdentityFile ~/.ssh/id_bitbucket
 ```
