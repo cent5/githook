@@ -1,6 +1,7 @@
 [settings]
 WEBHOOK_SOURCE=github
 WEBHOOK_URL=/pushed
+WEBHOOK_SECRET=<see https://docs.github.com/en/developers/webhooks-and-events/webhooks/securing-your-webhooks>
 LOG_FILE=/var/log/githook.log
-REPO_PATH=
-SSH_CRED=
+REPO_PATH=<path to local repo>
+SSH_CRED=<credentials needed to pull from remote repo>
