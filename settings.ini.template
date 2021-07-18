@@ -1,5 +1,6 @@
 [settings]
-URL_ENDPOINT=
-LIGHTWEIGH_LOG_FILE=
+WEBHOOK_SOURCE=github
+WEBHOOK_URL=/pushed
+LOG_FILE=/var/log/githook.log
 REPO_PATH=
 SSH_CRED=
